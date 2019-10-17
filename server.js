@@ -9,13 +9,9 @@ var options = { useNewUrlParser: true, useUnifiedTopology: true };
 //set the view engine to ejs
 app.set('view engine', 'ejs');
 
-app.get("/", function (req, res) {
-  res.render('pages/index');
-});
 
-// app.get("/product", function(req, res){
-//     res.render('pages/product');
-// });
+
+
 
 app.get("/product/", function (req, res) {
   var classid = req.params.id;
