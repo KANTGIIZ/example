@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+<div  class="container"  >
+    <h1>Product</h1>
+      <table class="table table-light">
+  <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        
+  </thead>
+  <tbody>
+         <th scope="row"></th>        
+          <tr>
+        <% game.forEach(function(g){ %>
+          <tr>
+            <td><%=g.id %></td>
+            <td><%=g.name %></td>
+            <td><%=g.price%></td>
+            <td scope="row">
+              <a class="btn btn-info" href="/product/productdetail/<%=g.id%>">
+                  View Details
+              </a>
+              <a class="btn btn-info" href="/product/editdetail/<%= g.id%>">
+                Edit
+            </a>
+            <a class="btn btn-info" href="/Deletedetail/<%= g.id%>">
+                Delete
+            </a>
+          </td>
+          </tr>
+        <% }); %>
+     
+  </tbody>
+  </table>      
+  </div>
+
+
+<% include ../partials/footer %>
